@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='Kmertoekizner',
+    name='KmerTokenizer',
     version='0.1.0',
     packages=find_packages(),
     description='A package for k-mer tokenization.',
     author='Saleh Refahi',
     author_email='sr3622@drexel.edu',
-    url='https://github.com/MsAlEhR/Kmertoekizner',
+    url='https://github.com/MsAlEhR/KmerTokenizer',
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
