@@ -7,4 +7,5 @@ Kmertoekizner is a Python package for k-mer tokenization.
 You can install the package via pip:
 
 ```sh
-pip install Kmertoekizner
+pip install git+https://github.com/MsAlEhR/Kmertoekizner.git
+
