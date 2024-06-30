@@ -1,11 +1,11 @@
-# Kmertoekizner
+# KmerTokenizer
 
-Kmertoekizner is a Python package for k-mer tokenization.
+KmerTokenizer is a Python package for k-mer tokenization.
 
 ## Installation
 
 You can install the package via pip:
 
 ```sh
-pip install git+https://github.com/MsAlEhR/Kmertoekizner.git
+pip install git+https://github.com/MsAlEhR/KmerTokenizer.git
 
