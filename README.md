@@ -14,7 +14,7 @@ pip install git+https://github.com/MsAlEhR/KmerTokenizer.git
 
 ## Usage
 ```py
-from Kmertoekizner import KmerTokenizer
+from KmerTokenizer import KmerTokenizer
 import torch
 
 seq_list = ["ATTTTTTTTTTTCCCCCCCCCCCGGGGGGGGATCGATGC"]
