@@ -20,20 +20,20 @@ class KmerTokenizer(PreTrainedTokenizer):
     @property
     def VOCAB(self):
         if self._vocab is None:
-            self._vocab = [''.join(i) for i in itertools.product(*(['ATCG'] * int(self.kmerlen)))]
+            self._vocab = [''.join(i) for i in itertools.product(*(['ACTG'] * int(self.kmerlen)))]
         return self._vocab
 
     @property
     def tokendict(self):
         if self._tokendict is None:
             self._tokendict = dict(zip(self.VOCAB, range(5, len(self.VOCAB) + 5)))
-            self._tokendict.update({'[UNK]': 0, '[SEP]': 1, '[CLS]': 2, '[MASK]': 3, '[PAD]': 4})
+            self._tokendict.update({'[UNK]': 0, '[SEP]': 1, '[PAD]': 2,'[CLS]': 3, '[MASK]': 4})
         return self._tokendict
 
     def _tokenize(self, text):
         stoprange = len(text) - (self.kmerlen - 1)
         tokens = [text[k:k + self.kmerlen] for k in range(0, stoprange, 1 if self.overlapping else self.kmerlen)]
-        return [token for token in tokens if set(token).issubset('ATCG')]
+        return [token for token in tokens if set(token).issubset('ACTG')]
 
     def _convert_token_to_id(self, token):
         return np.int16(self.tokendict.get(token, self.tokendict['[UNK]']))
